@@ -392,6 +392,12 @@
   .w-\[3px\] {
     width: 3px;
   }
+  .w-\[115px\] {
+    width: 115px;
+  }
+  .w-\[225px\] {
+    width: 225px;
+  }
   .w-full {
     width: 100%;
   }
@@ -403,6 +409,9 @@
   }
   .max-w-\[133px\] {
     max-width: 133px;
+  }
+  .max-w-\[225px\] {
+    max-width: 225px;
   }
   .max-w-\[350px\] {
     max-width: 350px;
@@ -1019,6 +1028,11 @@
   .lg\:h-auto {
     @media (width >= 64rem) {
       height: auto;
+    }
+  }
+  .lg\:w-1\/6 {
+    @media (width >= 64rem) {
+      width: calc(1/6 * 100%);
     }
   }
   .lg\:w-3\/12 {
