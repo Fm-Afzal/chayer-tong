@@ -34,3 +34,47 @@
 body {
   @apply font-inter text-base leading-6 font-normal text-dark-4;
 }
+menu-extended {
+  @apply overflow-hidden;
+}
+
+header.header-sticky {
+  @apply bg-white shadow-sm left-0 fixed -top-full w-full z-[9999] transition-all duration-500 ease-in-out;
+}
+
+header.header-sticky.header-show {
+  @apply top-0;
+}
+
+.toggle-menu {
+  @apply bg-transparent cursor-pointer block h-[30px] relative w-[30px] z-[991] transition-all duration-500 ease-in-out xl:hidden ml-7 p-0 border-0 outline-0;
+}
+.toggle-menu i {
+  @apply bg-black block h-0.5 w-full transition-all duration-300 ease-in;
+}
+.toggle-menu i + i {
+  @apply mt-[7px];
+}
+
+header.nav-open .toggle-menu i {
+  @apply relative;
+}
+header.nav-open .toggle-menu i:nth-child(1) {
+  @apply top-[9px] rotate-[45deg];
+}
+header.nav-open .toggle-menu i:nth-child(2) {
+  @apply opacity-0;
+}
+header.nav-open .toggle-menu i:nth-child(3) {
+  @apply -top-[9px] -rotate-[45deg];
+}
+header.nav-open {
+  @apply transition-all duration-500 ease-in-out;
+}
+header.nav-open .menu {
+  @apply opacity-[1] translate-y-0  visible  bg-white  w-full h-auto! max-h-[400px] overflow-y-scroll  p-7.5;
+}
+
+.dropdown {
+  @apply absolute left-0 top-full w-full xl:w-[200px] p-[calc(0.25rem*3)] bg-white text-dark shadow-lg mt-0 min-w-max rounded-lg opacity-0 invisible translate-y-1  transition-all ease-in duration-300 z-50 group-hover:opacity-100 group-hover:visible;
+}
