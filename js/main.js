@@ -36,5 +36,19 @@ $(function () {
     $(".menu-item-has-children").removeClass("open");
   });
 
-  
+  $(document).ready(function () {
+    const $btn = $('#scrollToTopBtn');
+
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 50) {
+        $btn.removeClass('hidden').addClass('flex');
+      } else {
+        $btn.removeClass('flex').addClass('hidden');
+      }
+    });
+
+    $btn.on('click', function () {
+      $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+  });
 });
