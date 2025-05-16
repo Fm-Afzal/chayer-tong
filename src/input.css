@@ -76,5 +76,5 @@ header.nav-open .menu {
 }
 
 .dropdown {
-  @apply absolute left-0 top-full w-full xl:w-[200px] p-[calc(0.25rem*3)] bg-white text-dark shadow-lg mt-0 min-w-max rounded-lg opacity-0 invisible translate-y-1  transition-all ease-in duration-300 z-50 group-hover:opacity-100 group-hover:visible;
+  @apply absolute left-0 top-full w-full xl:w-[200px] p-[calc(0.25rem*3)] bg-white shadow-lg mt-0 min-w-max rounded-lg opacity-0 invisible translate-y-1  transition-all ease-in duration-300 z-50 group-hover:opacity-100 group-hover:visible;
 }
