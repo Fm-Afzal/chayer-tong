@@ -28,7 +28,19 @@ $(function () {
     lastScrollTop = windowTop;
   });
 
-  // Sticky Menu
+  $(document).ready(function () {
+    $(".menu-item-has-children > a").on("click", function (event) {
+      if ($(window).width() < 992) {
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).parent().siblings().removeClass("open");
+        $(this).parent().toggleClass("open");
+        $(".menu").addClass("sub-menu-open");
+      }
+    });
+  });
+
+
   $(".toggle-menu").on("click", function () {
     $("body").toggleClass("menu-extended");
     $("header").toggleClass("nav-open");
